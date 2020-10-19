@@ -1,0 +1,102 @@
+/* hacked ul for class="products masonry isotope" to be center-aligned */
+#product-list {
+    margin-left: 20%;
+    margin-right: -15%;   
+}
+
+.topnav-right { 
+    /* This adjusts the placement of the login button on the navigation bar. */
+    margin-left: 420px;
+}
+
+#product-page-numbers {
+    margin-left: 180px;
+    margin-right: -127px;
+}
+
+.logo img {
+    margin-top: 10px;
+}
+
+.page-subtitle {
+
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    color: #ee3e30;
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 20%;
+    margin-right: -15%;   
+    text-align:center;
+    text-transform: uppercase;
+    
+}
+
+#register-subtitle {
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    color: #ee3e30;
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;   
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#register-form {
+    margin-left: 25%;
+    margin-right: 25%;   
+}
+
+#register-form input{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#register-form>div>label {
+    font-style: italic;
+    font-size: 1.3em;
+    text-align: center;   
+}
+
+#register-form>div>input[type=submit] {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+
+#error-diagnostic {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    width: 50%;
+}
+
+#error-diagnostic-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    width: 50%;
+}
+
+#error-diagnostic-text {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    width: 50%;
+}

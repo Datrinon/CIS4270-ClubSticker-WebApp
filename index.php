@@ -15,7 +15,7 @@ include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
 // Sanitize the routing input from links and forms - set default values if
 // missing.
 $post = true;
-if (hRequestMethod() === 'GET') {
+if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_METHOD]
     $vm = null;
     $actionGET = hGET('action');
     $ctlrGET = hGET('ctlr');
@@ -23,10 +23,12 @@ if (hRequestMethod() === 'GET') {
     $actionSet = isset($actionGET) ? $actionGET : '';
 
 
-    // TODO: Whitelist actions from a GET request.
+    // Whitelist actions from a GET request.
     $action = hasInclusionIn($actionSet, $whiltelistGET) ? $actionSet : '';
-    if (!$action !== '') {
+    // echo "DEBUG: " . $action . " RESULT: " . ($action !== '');
+    if (!$action !== '') { // interesting. if no action is given, it's true. if an action is in the whitelist, it's true.
         $post = false;
+        // echo "</br> DEBUG: If blank, POST is false: " . $post;
     }
 } else {
 

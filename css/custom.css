@@ -18,7 +18,7 @@
     margin-top: 10px;
 }
 
-.page-subtitle {
+#catalog-subtitle {
 
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
@@ -37,7 +37,7 @@
     
 }
 
-#register-subtitle {
+.page-subtitle {
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
     color: #ee3e30;

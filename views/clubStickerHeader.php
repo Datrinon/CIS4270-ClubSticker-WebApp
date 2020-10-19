@@ -11,7 +11,7 @@
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Club Sticker</title>
+    <title><?php echo Page::$title; ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="club-sticker-images/favicon.ico">
 
     <!-- FONTS -->
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>

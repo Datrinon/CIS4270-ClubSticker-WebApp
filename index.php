@@ -1,10 +1,13 @@
 <?php
+
 /**
  * Request broker GuitarShop Application.
  * 
  * @author jam
  * @version 180428
  */
+session_start();
+
 // Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
 define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
@@ -60,15 +63,19 @@ switch ($ctlr) {
             }
         }
         break;
-    case 'admin':
-        $controller = new AdminController();
+    case 'login':
+        $controller = new LoginController();
         if ($action === 'login') {
             if ($post) {
+                echo "THIS IS THE ONE";
                 $action = 'loginPOST';
             } else {
                 $action = 'loginGET';
             }
         }
+    break;
+    case 'admin':
+        $controller = new AdminController();
         if ($action === 'addProduct') {
             if ($post) {
                 $action = 'addEditProduct';

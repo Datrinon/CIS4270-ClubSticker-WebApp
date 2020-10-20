@@ -99,3 +99,9 @@
 main {
     min-height: 650px;
 }
+
+#signupLink { 
+    /* note. since anchor is an inline element, i use div to convert it to a block so it takes up maximum viewport width. */
+    text-align: center;
+    font-size: 1.4em;
+}

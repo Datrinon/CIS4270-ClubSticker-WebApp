@@ -6,13 +6,14 @@
  * @author jam
  * @version 180428
  */
-session_start();
+
 
 // Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
 define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
 include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
 
+session_start(); // for CSRF token
 
 // Sanitize the routing input from links and forms - set default values if
 // missing.
@@ -37,22 +38,32 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
     // POST request processing
     $vm = MessageVM::getErrorInstance();
 
-    $actionPost = hPOST('action');
-    $ctlrPost = hPOST('ctlr');
-    $action = isset($actionPost) ? $actionPost : '';
-    $ctlr = isset($ctlrPost) ? $ctlrPost : 'index';
+    if(csrf_token_is_valid()) {
+        if(csrf_token_is_recent()) {  //csrf token is good.
+            $actionPost = hPOST('action'); // read & sanitize in the post-sent action 
+            $ctlrPost = hPOST('ctlr'); // read & sanitize in the post-sent ctlr
+            $action = isset($actionPost) ? $actionPost : ''; // if action is not set, assign nothing.
+            $ctlr = isset($ctlrPost) ? $ctlrPost : 'index';  // if ctlr is not set, assign index (which will end up in default case);
+        } else {
+            $vm -> errorMsg .= "Form has expired.";
+        }
+    } else {
+        $vm->errorMsg .= 'Missing or invalid form token.';
+    }
 
+    // If an error message popped up...
+    // Prepare to output a user message. Set the action to invalidForm() on Home Controller.
     if ($vm->errorMsg !== '') {
-        $action = '';
-        $ctlr = '';
+        $action = 'invalidForm';
+        $ctlr = 'home';
     }
 }
 
 
 switch ($ctlr) {
-    case 'register':
+    case 'user':
         //echo $ctlr . " " . $action; // action not getting thru.
-        $controller = new RegisterController();
+        $controller = new UserController();
         if ($action === 'register') {
             if ($post) {
                 //echo "DEBUG: POST REQUEST";
@@ -62,18 +73,14 @@ switch ($ctlr) {
                 $action = 'registerGET';
             }
         }
-        break;
-    case 'login':
-        $controller = new LoginController();
         if ($action === 'login') {
             if ($post) {
-                echo "THIS IS THE ONE";
                 $action = 'loginPOST';
             } else {
                 $action = 'loginGET';
             }
         }
-    break;
+        break;
     case 'admin':
         $controller = new AdminController();
         if ($action === 'addProduct') {

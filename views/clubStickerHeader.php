@@ -68,7 +68,7 @@
                                                     <a href="." target="_self"><span>Upload Artwork</span></a>
                                             </li>
                                             <li id="login-button">
-                                                <a href="?ctlr=login&amp;action=login" target="_self" class="topnav-right" login><span>Login / Signup</span></a>
+                                                <a href="?ctlr=user&amp;action=login" target="_self" class="topnav-right" login><span>Login / Signup</span></a>
                                             </li>
                                     </nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu"></i></a>
                                 </div>

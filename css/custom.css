@@ -1,4 +1,9 @@
 /* hacked ul for class="products masonry isotope" to be center-aligned */
+
+#Content {
+    box-shadow: inset 0px 1px 0.75em gray;
+}
+
 #product-list {
     margin-left: 20%;
     margin-right: -15%;   
@@ -78,6 +83,7 @@
 }
 
 .error-diagnostic {
+    margin-top: 2%;
     margin-left: 25%;
     margin-right: 25%;
     width: 50%;
@@ -86,6 +92,7 @@
     color: #9e3535;
     padding-top: 10px;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 #error-diagnostic-title {
@@ -97,11 +104,18 @@
 
 
 main {
-    min-height: 650px;
+    min-height: 775px;
 }
 
-#signupLink { 
+.formLink { 
     /* note. since anchor is an inline element, i use div to convert it to a block so it takes up maximum viewport width. */
     text-align: center;
     font-size: 1.4em;
+}
+
+.error-diagnostic > button {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }

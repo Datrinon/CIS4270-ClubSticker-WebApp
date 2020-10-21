@@ -19514,5 +19514,5 @@ a.action_button:hover{text-decoration:none}
 
 
 #Content.no-padding, .template-slider #Content, .with_aside #Content {
-    padding-top: 0px !important;
+    /* padding-top: 0px !important; */
 }

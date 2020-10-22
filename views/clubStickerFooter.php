@@ -13,13 +13,16 @@
                     <!--Social info area-->
                     <ul class="social">
                         <li class="facebook">
-                            <a href="https://www.facebook.com/Beantown-Themes-653197714728193" title="Facebook"><i class="icon-facebook"></i></a>
+                            <a href="https://www.facebook.com/MuffinGroup" title="Facebook"><i class="icon-facebook"></i></a>
                         </li>
                         <li class="twitter">
-                            <a href="https://twitter.com/BeantownThemes" title="Twitter"><i class="icon-twitter"></i></a>
+                            <a href="https://twitter.com/Muffin_Group" title="Twitter"><i class="icon-twitter"></i></a>
                         </li>
-                        <li class="dribbble">
-                            <a href="#" title="Dribbble"><i class="icon-dribbble"></i></a>
+                        <li class="youtube">
+                            <a href="https://www.youtube.com/user/MuffinGroup" title="YouTube"><i class="icon-youtube"></i></a>
+                        </li>
+                        <li class="muffin-group">
+                            <a href="https://muffingroup.com/" title="Muffin Group"><i class="icon-info"></i></a>
                         </li>
                     </ul>
                 </div>

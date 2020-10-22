@@ -62,6 +62,7 @@
 #register-form {
     margin-left: 25%;
     margin-right: 25%;   
+    padding-bottom: 5%;
 }
 
 #register-form input{
@@ -104,7 +105,7 @@
 
 
 main {
-    min-height: 775px;
+    min-height: 750px;
 }
 
 .formLink { 

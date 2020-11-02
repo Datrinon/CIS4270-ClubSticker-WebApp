@@ -1,7 +1,5 @@
     <!-- Footer-->
     <footer id="Footer" class="clearfix">
-
-
         <!-- Footer copyright-->
         <div class="footer_copy">
             <div class="container">

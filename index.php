@@ -42,6 +42,7 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
         if(csrf_token_is_recent()) {  //csrf token is good.
             $actionPost = hPOST('action'); // read & sanitize in the post-sent action 
             $ctlrPost = hPOST('ctlr'); // read & sanitize in the post-sent ctlr
+            // echo "Where am I Going?!: " . $actionPost . ' & ' . $ctlrPost; // DEBUG
             $action = isset($actionPost) ? $actionPost : ''; // if action is not set, assign nothing.
             $ctlr = isset($ctlrPost) ? $ctlrPost : 'index';  // if ctlr is not set, assign index (which will end up in default case);
         } else {

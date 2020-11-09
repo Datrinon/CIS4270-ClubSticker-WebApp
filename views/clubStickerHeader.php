@@ -12,8 +12,8 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <title><?php echo Page::$title; ?></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Group 6 for CIS 4270.01">
+    <meta name="author" content="Group 6">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -24,6 +24,9 @@
     <!-- FONTS -->
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+
+    <!-- BOOTSTRAP -->
+
 
     <!-- CSS -->
     <link rel='stylesheet' href='css/global.css'>

@@ -1,0 +1,86 @@
+.user-profile .user-profile-card {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+  }
+  
+  .user-profile-card .user-profile-header {
+    background: url("http://lorempixel.com/850/280/nature/4/");
+    background-size: cover;
+    height: 245px;
+  }
+  
+  .user-profile-card .user-profile-avatar {
+    position: relative;
+    top: -110px;
+    margin-bottom: -110px;
+    padding: 0 15px;
+  }
+  
+  .user-profile-avatar img {
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.5);
+    float: right;
+  }
+  
+  .user-profile small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+    
+  }
+  
+
+  #sticker-header {
+    border-top: 1.25px solid rgba(255, 50, 15, 0.2);
+    color: #ee3e30;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px; 
+    text-align:center;
+    text-transform: uppercase; 
+  }
+
+  #username {
+    font-family: Roboto, sans-serif;
+    font-size: 4em;
+    margin-top: 15px;
+  }
+
+  #ranking {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin-left: 5px;
+	margin-bottom: 15px;
+	padding-top: 10px;
+  }
+
+  #quote {
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+    margin-left: 5px;
+	margin-bottom: 15px;
+  }
+
+  #profile-page-header-title {
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #ee3e30;
+    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 25px;
+	margin-bottom: 0px;
+    border-bottom: 2px solid rgba(255, 174, 174, 0.541);
+	margin-right: 40px;
+  }
+
+  .slider_pagination {
+    padding-bottom: 15px;
+  }
+}

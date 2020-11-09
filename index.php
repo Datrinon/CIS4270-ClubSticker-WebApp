@@ -14,6 +14,7 @@ define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
 include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
 
 session_start(); // for CSRF token
+// var_dump($_SESSION); // Debug to keep track of _SESSION array
 
 // Sanitize the routing input from links and forms - set default values if
 // missing.

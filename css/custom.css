@@ -77,6 +77,13 @@
     text-align: center;   
 }
 
+#password-tips {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: justify;
+}
+
 #input-form>div>input[type=submit] {
     margin-left: 25%;
     margin-right: 25%;
@@ -119,4 +126,18 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+/*//* Relating to the styling of the logged in header */
+/* This hack pushes the my account and logout button to the right side of navbar */
+#myAccountButton {
+    margin-left: 350px !important;
+}
+
+/* This rule applies to the navbar when you make the viewport narrow enough */
+/* It gets rid of the margin-left that we applied earlier. */
+@media only screen and (max-width: 1239px) {
+    #Top_bar #menu ul li {
+    margin-left: 0px !important;
+}
 }

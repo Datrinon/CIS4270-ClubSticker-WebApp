@@ -7,6 +7,11 @@
  * @version 180428
  */
 
+//* DEBUG Code
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
 
 // Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
@@ -38,7 +43,7 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
 
     // POST request processing
     $vm = MessageVM::getErrorInstance();
-
+    
     if(csrf_token_is_valid()) {
         if(csrf_token_is_recent()) {  //csrf token is good.
             $actionPost = hPOST('action'); // read & sanitize in the post-sent action 

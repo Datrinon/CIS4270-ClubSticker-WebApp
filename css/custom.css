@@ -142,3 +142,25 @@ main {
 }
 }
 
+/* This rule applies to status messages that appear on successful form submissions. */
+.status-diagnostic {
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 60%;
+    border: .5px solid #66d357;
+    border-radius: 5px;
+    color: #496b56;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* This rule applies to status messages titles that appear on successful form submissions. */
+#diagnostic-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-align: center;
+}

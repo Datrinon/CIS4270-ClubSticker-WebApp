@@ -13,10 +13,17 @@
 // error_reporting(E_ALL);
 
 
-// Non-web tree base directory for this application.
+// STAGING VER: Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
 define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
 include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
+
+// PRODUCTION VER
+// define('NON_WEB_BASE_DIR', '/home/c1lfskn4slo8/cis4270/');
+// define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubSticker/');
+// include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
+
+
 
 session_start(); // for CSRF token
 // var_dump($_SESSION); // Debug to keep track of _SESSION array
@@ -40,7 +47,7 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
         // echo "</br> DEBUG: If blank, POST is false: " . $post;
     }
 } else {
-
+    
     // POST request processing
     $vm = MessageVM::getErrorInstance();
     
@@ -87,6 +94,14 @@ switch ($ctlr) {
                 $action = 'loginGET';
             }
         }
+        if ($action === 'uploadArtwork') {
+            if ($post) {
+                $action = 'uploadArtworkPOST';
+            } else {
+                $action = 'uploadArtworkGET';
+            }
+        }
+
         break;
     case 'admin':
         $controller = new AdminController();

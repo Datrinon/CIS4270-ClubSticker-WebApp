@@ -1,7 +1,55 @@
+#upload-form {
+	padding-top: 15%;
+	padding-left: 35px;
+	width: 100%;
+	text-align: center;
+}
+
+input[name=sticker-picture] {
+	margin-left: 70px;
+}
+
+#upload-form label {
+	font-style: italic;
+  	font-size: 1.25em;
+	text-align: inherit;
+	width: inherit;
+}
+
+#productName {
+	margin-left: 30%;
+	width: 40%;
+}
+
+#product-image-tips{
+    width: 100%;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 0.75em;
+	color: rgb(172, 171, 170);
+}
+
+#price-field {
+	margin-left: 38%;
+	display:flex;
+	width: 10%;
+}
+
+.form-icon {
+	margin-left: 25px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid rgb(235,235,235);
+	background-color: rgb(234,234,234);
+}
 .preview-box {
-	margin: 0 auto;
+	text-align: center;
 	height: 500px;
 	width: 500px;
-	background-color: gray;
-	margin-top: 20px;
+	border: 1px solid grey;
+}
+
+#product-image {
+	margin-left: 50px;
+	margin-bottom: 20px;	
 }

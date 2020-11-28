@@ -37,6 +37,7 @@
     <link rel='stylesheet' href='css/profilecustom.css'>
     <link rel='stylesheet' href='css/uploadartworkcustom.css'>
 
+
     <!-- CSS Skin-->
     <link rel='stylesheet' href='css/skins/orange/stylec721.css'>
 
@@ -68,10 +69,9 @@
                                     <nav id="menu">
                                         <ul id="menu-main-menu" class="menu">
                                             <li id="menu-item-1354">
-                                                <a href="?ctlr=user&amp;action=userIndex" target="_Self""><span>Sticker Catalog</span></a>
+                                                <a href="." target="_Self""><span>Sticker Catalog</span></a>
                                             </li>
-                                            <li id=" menu-item-1354" >
-                                                    <!-- TODO: NEED TO REPLACE THIS WITH A FUNCTIONING UPLOAD BUTTON.  -->
+                                            <li id=" menu-item-1354">
                                                     <a href="?ctlr=user&amp;action=uploadArtwork" target="_self"><span style="border-right-width: 0px">Upload Artwork</span></a>
                                             </li>
 

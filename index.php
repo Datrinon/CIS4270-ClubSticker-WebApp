@@ -7,22 +7,26 @@
  * @version 180428
  */
 
-//* DEBUG Code
+//! DEBUG Code for use during live deployment
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-
-// STAGING VER: Non-web tree base directory for this application.
+// STAGING VER:
+// Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
 define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
 include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
+// Web base directory
+define('WEB_BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/clubsticker-staging/');
 
-// PRODUCTION VER
+// PRODUCTION VER:
+// Non-web tree base directory for this application.
 // define('NON_WEB_BASE_DIR', '/home/c1lfskn4slo8/cis4270/');
 // define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubSticker/');
 // include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
-
+// Web base directory
+// define('WEB_BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 
 
 session_start(); // for CSRF token
@@ -56,10 +60,10 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
             $actionPost = hPOST('action'); // read & sanitize in the post-sent action 
             $ctlrPost = hPOST('ctlr'); // read & sanitize in the post-sent ctlr
             // echo "Where am I Going?!: " . $actionPost . ' & ' . $ctlrPost; // DEBUG
-            $action = isset($actionPost) ? $actionPost : ''; // if action is not set, assign nothing.
-            $ctlr = isset($ctlrPost) ? $ctlrPost : 'index';  // if ctlr is not set, assign index (which will end up in default case);
+            $action = isset($actionPost) ? $actionPost : 'index'; // if action is not set, assign nothing.
+            $ctlr = isset($ctlrPost) ? $ctlrPost : 'home';  // if ctlr is not set, assign index (which will end up in default case);
         } else {
-            $vm -> errorMsg .= "Form has expired.";
+            $vm->errorMsg .= "Form has expired.";
         }
     } else {
         $vm->errorMsg .= 'Missing or invalid form token.';
@@ -76,14 +80,12 @@ if (hRequestMethod() === 'GET') { //hRequestMethod sanitizes $_SERVER[REQUEST_ME
 
 switch ($ctlr) {
     case 'user':
-        //echo $ctlr . " " . $action; // action not getting thru.
+        //echo $ctlr . " " . $action; // debug to show controller and action -- in case it doesn't go through.
         $controller = new UserController();
         if ($action === 'register') {
             if ($post) {
-                //echo "DEBUG: POST REQUEST";
                 $action = 'registerPOST';
             } else {
-                //echo "DEBUG: GET REQUEST";
                 $action = 'registerGET';
             }
         }
@@ -101,25 +103,19 @@ switch ($ctlr) {
                 $action = 'uploadArtworkGET';
             }
         }
-
-        break;
-    case 'admin':
-        $controller = new AdminController();
-        if ($action === 'addProduct') {
+        if ($action === 'editProfile') {
             if ($post) {
-                $action = 'addEditProduct';
+                $action = 'editProfilePOST';
             } else {
-                $action = 'showAddProduct';
+                $action = 'editProfileGET';
             }
         }
         break;
     case 'home':
         $controller = new HomeController();
         break;
-    case 'cart':
-        $controller = new CartController();
-        break;
     default:
+        // echo "default controller running here, case not matched anywhere"; //!DEBUG
         $controller = new DefaultController();
 }
 $controller->run($action, $vm);

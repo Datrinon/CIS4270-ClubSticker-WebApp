@@ -53,3 +53,9 @@ input[name=sticker-picture] {
 	margin-left: 50px;
 	margin-bottom: 20px;	
 }
+
+/* This ensures the image does not go beyond the preview pane. */
+#preview-image {
+	height: 100% !important;
+	object-fit: cover;
+}

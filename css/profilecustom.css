@@ -19,12 +19,13 @@
 
 .user-profile-avatar img {
   width                : 250px;
-  height               : 250px;
+  height               : 250px !important;
   -webkit-border-radius: 50%;
   -moz-border-radius   : 50%;
   border-radius        : 50%;
-  border               : 2px solid rgba(255, 255, 255, 0.5);
+  border               : 2px solid rgba(0, 0, 0, 0.2);
   float                : right;
+  object-fit           : cover;
 }
 
 .user-profile small {
@@ -94,13 +95,33 @@
   margin-bottom: 15px;
 }
 
-/* This adjusts the space between "My sticker" and the stickers */
+/* This refers to the carousel buttons on the profile when the user has more than 4 stickers.
 .shop_slider .blog_slider_header {
-  margin-top: -5%;
+  margin-right: 25px;
 }
 
 /* This CSS is for a dialog that pops up when the user has no stickers. */
 .no-sticker-message {
   font-size: 1.25em;
   text-align: center;
+}
+
+/* This CSS is for the edit profile picture button */
+#editProfilePicture {
+  margin-left: 40% !important;
+  margin-bottom: 15px;
+}
+
+#cancel-button {
+  margin-left: 25%;
+}
+#cancel-button .button_label {
+  text-align: center;
+}
+
+/* This CSS is for a description set by the user. */
+#userDescription {
+  width: 50%;
+  margin-left: 25%;
+  resize: none;
 }

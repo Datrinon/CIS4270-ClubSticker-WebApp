@@ -7,12 +7,17 @@
  * @version 180428
  */
 
-//! DEBUG Code for use during live deployment
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+$lifetime = 0;
+$path = "/";
+$domain = ".club-sticker.com";
+$secure = true;
+$httponly = true;
 
-// STAGING VER:
+// Cookie settings for live site
+// session_set_cookie_params(0, "/", ".club-sticker.com", $secure, $httponly);
+
+
+//! STAGING VER:
 // Non-web tree base directory for this application.
 define('NON_WEB_BASE_DIR', 'C:/Users/Dan/Documents/_cis4270/assignments/cis4270/');
 define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubsticker-GS-adaptation/');
@@ -20,7 +25,7 @@ include_once(APP_NON_WEB_BASE_DIR . 'includes/guitarShopIncludes.php');
 // Web base directory
 define('WEB_BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/clubsticker-staging/');
 
-// PRODUCTION VER:
+//! PRODUCTION VER:
 // Non-web tree base directory for this application.
 // define('NON_WEB_BASE_DIR', '/home/c1lfskn4slo8/cis4270/');
 // define('APP_NON_WEB_BASE_DIR', NON_WEB_BASE_DIR . 'clubSticker/');

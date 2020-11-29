@@ -95,7 +95,7 @@
   margin-bottom: 15px;
 }
 
-/* This refers to the carousel buttons on the profile when the user has more than 4 stickers.
+/* This refers to the carousel buttons on the profile when the user has more than 4 stickers. */
 .shop_slider .blog_slider_header {
   margin-right: 25px;
 }
@@ -124,4 +124,11 @@
   width: 50%;
   margin-left: 25%;
   resize: none;
+}
+
+/* This CSS is for the scaling of images as the user's browser increases width -- it ensures it never goes beyond 500px. */
+.shop_slider .shop_slider_ul li {
+	float: left;
+	max-width: 500px !important;
+	list-style: none;
 }

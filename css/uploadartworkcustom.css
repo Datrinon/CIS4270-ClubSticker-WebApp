@@ -1,5 +1,5 @@
 #upload-form {
-	padding-top: 15%;
+	padding-top: 5%;
 	padding-left: 35px;
 	width: 100%;
 	text-align: center;
@@ -21,7 +21,7 @@ input[name=sticker-picture] {
 	width: 40%;
 }
 
-#product-image-tips{
+.form-label-tips{
     width: 100%;
 	text-align: center;
 	font-family: sans-serif;

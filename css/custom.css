@@ -171,3 +171,16 @@ main {
 	background: rgba(0,0,0,0);
 	
 }
+
+#banner {
+    display: block;
+	margin-left: 25%;
+	border: 0.5px solid fuchsia;
+}
+
+@media only screen and (max-width: 1239px) {
+#banner {
+    margin-left: 20% !important;
+    width: 95%;
+}
+}

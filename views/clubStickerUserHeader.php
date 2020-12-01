@@ -23,8 +23,8 @@
     <link rel="shortcut icon" href="club-sticker-images/favicon.ico">
 
     <!-- FONTS -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap -->

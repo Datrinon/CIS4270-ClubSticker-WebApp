@@ -1,20 +1,11 @@
 <?php
 
-/**
- * Request broker GuitarShop Application.
- * 
- * @author jam
- * @version 180428
- */
-
 $lifetime = 0;
-$path = "/";
-$domain = ".club-sticker.com";
 $secure = true;
 $httponly = true;
 
 // Cookie settings for live site
-// session_set_cookie_params(0, "/", ".club-sticker.com", $secure, $httponly);
+// session_set_cookie_params($lifetime, "/", ".club-sticker.com", $secure, $httponly);
 
 
 //! STAGING VER:
